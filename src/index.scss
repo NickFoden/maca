@@ -9,3 +9,7 @@ html {
 *:before {
   box-sizing: inherit;
 }
+@font-face {
+  font-family: 'Soleil';
+  src: url('./assets/fonts/Soleil_W01_Regular.woff2') format('woff2'), url('./assets/fonts/Soleil_W01_Regular.woff') format('woff'), url('./assets/fonts/Soleil_W01_Regular.ttf') format('truetype');
+}

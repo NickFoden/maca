@@ -1,0 +1,75 @@
+$color-black: #000000;
+$color-black-text: #595959;
+$color-teal: #5DAD93;
+$color-white: #FFFFFF;
+
+$font-Poppins-Regular: 400 16px Poppins, sans-serif;
+$font-Poppins-Medium: 500 16px Poppins, sans-serif;
+$font-Poppins-SemiBold: 600 16px Poppins, sans-serif;
+$font-Soleil: 400 16px Soleil, sans-serif;
+
+.header_nav {
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+  padding-left: 40px;
+  width: 100vw;
+
+  h1 {
+    color: $color-teal;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 40px;
+    width: 100%;
+
+    li {
+      color: $color-black-text;
+      font: $font-Poppins-Medium;
+      font-size: 12px;
+      margin: 0 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  &.logo {
+    height: 50px;
+    justify-content: flex-start;
+  }
+}
+
+.MenuItem_container {
+  background: $color-white;
+  display: flex;
+
+}
+
+footer {
+  display: flex;
+  max-height: 50px;
+
+  .footer_nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  a {
+    padding: 15px;
+    text-decoration: none;
+  }
+}
+
+.social_ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    padding: 0 7.5px;
+
+    img {
+      width: 30px;
+    }
+  }
+}

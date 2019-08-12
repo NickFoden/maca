@@ -1,25 +1,24 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./app.scss";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Menu from "./pages/Menu";
+import NavHeader from "./components/NavHeader";
 
 function App() {
+  const [currentCart, setCart] = useState({ items: [] });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavHeader currentCart={currentCart} />
+      <Route
+        exact
+        path="/"
+        component={Menu}
+        currentCart={currentCart}
+        setCart={setCart}
+      />
+      <Footer />
+    </Router>
   );
 }
 
