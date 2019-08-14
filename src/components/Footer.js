@@ -14,13 +14,13 @@ const Footer = props => {
         <h5>© {new Date().getFullYear()} Macarons</h5>
       </div>
       <nav className="footer_nav">
-        <Link>Company</Link>
-        <Link>About</Link>
-        <Link>locations</Link>
-        <Link>contact us</Link>
-        <Link>Orders</Link>
-        <Link>Order Tracker</Link>
-        <Link>Delivery FAQs</Link>
+        <Link to="/">Company</Link>
+        <Link to="/">About</Link>
+        <Link to="/">locations</Link>
+        <Link to="/">contact us</Link>
+        <Link to="/">Orders</Link>
+        <Link to="/">Order Tracker</Link>
+        <Link to="/">Delivery FAQs</Link>
       </nav>
     </footer>
   );

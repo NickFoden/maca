@@ -6,16 +6,18 @@ import NavHeader from "./components/NavHeader";
 
 function App() {
   const [currentCart, setCart] = useState({ items: [] });
-
+  const addToCart = id => {
+    setCart({ items: [...currentCart.items, id] });
+  };
   return (
     <Router>
       <NavHeader currentCart={currentCart} />
       <Route
         exact
         path="/"
-        component={Menu}
-        currentCart={currentCart}
-        setCart={setCart}
+        render={props => (
+          <Menu {...props} currentCart={currentCart} addToCart={addToCart} />
+        )}
       />
       <Footer />
     </Router>

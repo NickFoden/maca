@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { formatCurrency } from "../utils/currencyConvert";
 import "./styles.scss";
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, addToCart }) => {
   const [readMoreStatus, updateReadMore] = useState(false);
   const {
     cost,
     description,
     description2,
+    id,
     image,
     image2,
     image3,
@@ -16,6 +18,10 @@ const MenuItem = ({ item }) => {
 
   const toggleReadMore = () => {
     updateReadMore(!readMoreStatus);
+  };
+
+  const handleAddToCart = id => {
+    addToCart(id);
   };
 
   return (
@@ -32,7 +38,10 @@ const MenuItem = ({ item }) => {
         {description2 && <button onClick={toggleReadMore}>Read More</button>}
         {description2 && readMoreStatus && <p>{description2}</p>}
       </div>
-      <button>{cost}/ each</button>
+      <div>
+        <div>{formatCurrency(cost)}/ea.</div>
+        <button onClick={() => handleAddToCart(id)}>+ Add to Cart</button>
+      </div>
     </div>
   );
 };

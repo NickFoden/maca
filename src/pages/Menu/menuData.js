@@ -12,6 +12,7 @@ import vanilla3 from "../../assets/vanilla@3x.png";
 
 export default {
   a: {
+    id: "a",
     title: "custom gift box",
     variation: "assorted flavors ",
     description:
@@ -24,6 +25,7 @@ export default {
     image3: giftBox3
   },
   b: {
+    id: "b",
     title: "vanilla earl grey macaron",
     variation: "1 piece",
     description:
@@ -34,6 +36,7 @@ export default {
     image3: vanilla3
   },
   c: {
+    id: "c",
     title: "rose macarons",
     variation: "1 piece",
     description:

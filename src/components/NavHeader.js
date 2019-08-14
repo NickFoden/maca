@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import Cart from "../assets/cart_icon.svg";
 import "./styles.scss";
 
-const NavHeader = () => {
+const NavHeader = ({ currentCart }) => {
   return (
     <nav className="header_nav">
       <img className="logo" src={Logo} alt="Macarons text" />
@@ -15,6 +15,7 @@ const NavHeader = () => {
         <li>
           <img src={Cart} alt="Cart" /> cart
         </li>
+        <li>{currentCart.items.length}</li>
       </ul>
     </nav>
   );
