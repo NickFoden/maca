@@ -1,0 +1,94 @@
+@import "../styles.scss";
+
+.MenuItem_button_div {
+  background-color: $color-button-background;
+  height: 160px;
+  min-height: 160px;
+  min-width: 220px;
+  text-align: center;
+  width: 220px;
+
+  button {
+    background-color: $color-teal;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font: $font-Soleil;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: .5px;
+    line-height: 22.5px;
+    height: 50px;
+    width: 175px;
+  }
+
+  #MenuItem_button_ordered {
+    background-color: $color-ordered;
+  }
+
+  p {
+    font: $font-Poppins-SemiBold;
+    font-size: 20px;
+    color: $color-black-text;
+    letter-spacing: 0;
+  }
+}
+
+.MenuItem_container {
+  box-shadow: 0 1px 0 0 #F3F0EB;
+  background: $color-white;
+
+  display: flex;
+  padding: 5px 5px 5px 40px;
+
+}
+
+.MenuItem_hr {
+  height: 2px;
+  border: none;
+  margin-left: 40px;
+}
+
+.MenuItem_image {
+  height: 160px;
+  min-height: 160px;
+  min-width: 220px;
+  width: 220px;
+}
+
+.MenuItem_text_read_button {
+  border: 0;
+  background-color: transparent;
+  color: $color-teal;
+  cursor: pointer;
+  font: $font-Poppins-SemiBold;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.MenuItem_text {
+  padding-left: 20px;
+
+  h2 {
+    color: $color-teal;
+    font: $font-Poppins-Medium;
+    font-size: 26px;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    color: $color-black-text;
+    font: $font-Poppins-Medium;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  p {
+    color: $color-black-text;
+    font: $font-Poppins-Regular;
+    font-size: 12px;
+    width: 462px;
+  }
+
+}

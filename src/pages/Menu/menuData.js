@@ -14,7 +14,7 @@ export default {
   a: {
     id: "a",
     title: "custom gift box",
-    variation: "assorted flavors ",
+    variation: "Assorted Flavors ",
     description:
       "This 16 piece gift box is perfect for birthdays, anniversaries or just for yourself! Customize your flavors or pick from our three gift boxes!",
     description2:
