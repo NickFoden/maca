@@ -13,7 +13,9 @@ const NavHeader = ({ currentCart }) => {
         <li>gifts</li>
         <li>|</li>
         <li>
-          <img src={Cart} alt="Cart" /> cart
+          <button className="cart_button">
+            <img src={Cart} alt="Cart" className="cart_image" /> cart
+          </button>
         </li>
         <li>{currentCart.items.length}</li>
       </ul>

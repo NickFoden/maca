@@ -38,10 +38,28 @@ $font-Soleil: 400 16px Soleil, sans-serif;
     }
   }
 
+  .cart_button {
+    background: transparent;
+    border: 0;
+    color: $color-black-text;
+    display: flex;
+    font: $font-Poppins-Medium;
+    font-size: 12px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    justify-content: center;
+
+  }
+
   &.logo {
     height: 50px;
     justify-content: flex-start;
   }
+}
+
+.cart_image {
+  margin-right: 5px;
+  transform: translateY(-2px);
 }
 
 footer {
