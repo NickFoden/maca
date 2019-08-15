@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import Cart from "../assets/cart_icon.svg";
 import "./styles.scss";
 
-const NavHeader = ({ currentCart }) => {
+const NavHeader = ({ currentCart, toggleCartView }) => {
   return (
     <nav className="header_nav">
       <img className="logo" src={Logo} alt="Macarons text" />
@@ -13,7 +13,7 @@ const NavHeader = ({ currentCart }) => {
         <li>gifts</li>
         <li>|</li>
         <li>
-          <button className="cart_button">
+          <button className="cart_button" onClick={toggleCartView}>
             <img src={Cart} alt="Cart" className="cart_image" /> cart
           </button>
         </li>
