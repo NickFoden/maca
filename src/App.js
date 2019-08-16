@@ -19,6 +19,13 @@ function App() {
     });
   };
 
+  const checkout = () => {
+    setCart({
+      items: {}
+    });
+    toggleCartView();
+  };
+
   const removeItem = id => {
     setCart({
       items: {
@@ -44,6 +51,7 @@ function App() {
     <Router>
       <NavHeader numberInCart={totalItems()} toggleCartView={toggleCartView} />
       <Cart
+        checkout={checkout}
         currentCartItemsObj={currentCart.items}
         removeItem={removeItem}
         toggleCartView={toggleCartView}
