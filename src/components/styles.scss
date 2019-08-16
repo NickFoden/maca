@@ -1,10 +1,10 @@
 $color-black: #000000;
 $color-black-text: #595959;
-$color-teal: #5DAD93;
-$color-white: #FFFFFF;
-$color-button-background: #FAF9F7;
-$color-ordered: #2FC594;
-$color-footer-text: #919EAB;
+$color-teal: #5dad93;
+$color-white: #ffffff;
+$color-button-background: #faf9f7;
+$color-teal-bright: #2fc594;
+$color-footer-text: #919eab;
 
 $font-Poppins-Regular: 400 16px Poppins, sans-serif;
 $font-Poppins-Medium: 500 16px Poppins, sans-serif;
@@ -12,7 +12,7 @@ $font-Poppins-SemiBold: 600 16px Poppins, sans-serif;
 $font-Soleil: 400 16px Soleil, sans-serif;
 
 .header_nav {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
   padding-left: 40px;
   height: 70px;
@@ -47,9 +47,25 @@ $font-Soleil: 400 16px Soleil, sans-serif;
     font: $font-Poppins-Medium;
     font-size: 12px;
     margin: 0 10px;
+    position: relative;
     text-transform: uppercase;
     justify-content: center;
-
+    .cart_count {
+      background: $color-teal-bright;
+      border-radius: 25px;
+      color: $color-white;
+      content: attr(itemCount);
+      font: $font-Poppins-SemiBold;
+      font-size: 10px;
+      height: 20px;
+      left: 18px;
+      line-height: 20px;
+      position: absolute;
+      text-align: center;
+      top: -12px;
+      width: 20px;
+      z-index: 5;
+    }
   }
 
   &.logo {
@@ -78,7 +94,6 @@ footer {
   a {
     text-decoration: none;
   }
-
 }
 
 .footer_left_container {
@@ -97,7 +112,7 @@ footer {
   }
 
   a:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   h3 {

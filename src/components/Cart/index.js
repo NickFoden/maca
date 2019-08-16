@@ -1,15 +1,17 @@
 import React from "react";
 import "./cartStyles.scss";
 
-const Cart = ({ toggleCartView, visibility }) => {
+const Cart = ({ currentCart, toggleCartView, visibility }) => {
   const show = visibility ? "displayCart" : "none";
+  console.dir(currentCart);
 
   if (visibility) {
     return (
       <div className={show} id="cart">
-        <div className="cart_background" />
+        <div onClick={toggleCartView} className="cart_background" />
         <div className="cart_slider">
-          <h1>Cart</h1>
+          <h1>My Cart</h1>
+
           <button onClick={toggleCartView}>Toggle the view</button>
         </div>
       </div>

@@ -15,15 +15,15 @@
     cursor: pointer;
     font: $font-Soleil;
     font-size: 13px;
-    color: #FFFFFF;
-    letter-spacing: .5px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
     line-height: 22.5px;
     height: 50px;
     width: 175px;
   }
 
   #MenuItem_button_ordered {
-    background-color: $color-ordered;
+    background-color: $color-teal-bright;
   }
 
   p {
@@ -35,12 +35,11 @@
 }
 
 .MenuItem_container {
-  box-shadow: 0 1px 0 0 #F3F0EB;
+  box-shadow: 0 1px 0 0 #f3f0eb;
   background: $color-white;
 
   display: flex;
   padding: 5px 5px 5px 40px;
-
 }
 
 .MenuItem_hr {
@@ -92,5 +91,4 @@
     font-size: 12px;
     width: 462px;
   }
-
 }

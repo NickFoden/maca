@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import Cart from "../assets/cart_icon.svg";
 import "./styles.scss";
 
-const NavHeader = ({ currentCart, toggleCartView }) => {
+const NavHeader = ({ numberInCart, toggleCartView }) => {
   return (
     <nav className="header_nav">
       <img className="logo" src={Logo} alt="Macarons text" />
@@ -14,10 +14,12 @@ const NavHeader = ({ currentCart, toggleCartView }) => {
         <li>|</li>
         <li>
           <button className="cart_button" onClick={toggleCartView}>
+            {numberInCart > 0 && (
+              <span className="cart_count">{numberInCart}</span>
+            )}
             <img src={Cart} alt="Cart" className="cart_image" /> cart
           </button>
         </li>
-        <li>{currentCart.items.length}</li>
       </ul>
     </nav>
   );

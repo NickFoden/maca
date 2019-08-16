@@ -8,7 +8,7 @@ import NavHeader from "./components/NavHeader";
 
 function App() {
   const [currentCart, setCart] = useState({ items: [] });
-  const [cartVisible, setCartVisibility] = useState(true);
+  const [cartVisible, setCartVisibility] = useState(false);
   const addToCart = id => {
     setCart({ items: [...currentCart.items, id] });
   };
@@ -17,15 +17,20 @@ function App() {
   };
   return (
     <Router>
-      <NavHeader currentCart={currentCart} toggleCartView={toggleCartView} />
-      <Cart visibility={cartVisible} toggleCartView={toggleCartView} />
+      <NavHeader
+        numberInCart={currentCart.items.length}
+        toggleCartView={toggleCartView}
+      />
+      <Cart
+        currentCart={currentCart}
+        toggleCartView={toggleCartView}
+        visibility={cartVisible}
+      />
       <Layout>
         <Route
           exact
           path="/"
-          render={props => (
-            <Menu {...props} currentCart={currentCart} addToCart={addToCart} />
-          )}
+          render={props => <Menu {...props} addToCart={addToCart} />}
         />
       </Layout>
       <Footer />
