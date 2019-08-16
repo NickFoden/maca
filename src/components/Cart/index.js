@@ -12,7 +12,11 @@ const Cart = ({ currentCart, toggleCartView, visibility }) => {
         <div className="cart_slider">
           <h1>My Cart</h1>
 
-          <button onClick={toggleCartView}>Toggle the view</button>
+          <div className="cart_total_div">
+            <h4>Total</h4>
+            <h4>$55.00</h4>
+          </div>
+          <button onClick={toggleCartView}>Continue to Checkout</button>
         </div>
       </div>
     );

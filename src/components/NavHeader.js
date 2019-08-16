@@ -17,7 +17,7 @@ const NavHeader = ({ numberInCart, toggleCartView }) => {
             {numberInCart > 0 && (
               <span className="cart_count">{numberInCart}</span>
             )}
-            <img src={Cart} alt="Cart" className="cart_image" /> cart
+            <img src={Cart} alt="Shopping Cart" className="cart_image" /> cart
           </button>
         </li>
       </ul>

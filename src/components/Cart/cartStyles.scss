@@ -37,5 +37,37 @@
   background: white;
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  padding: 0 30px;
+  width: 362px;
+  h1 {
+    color: $color-black-text;
+    font: $font-Poppins-SemiBold;
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+  button {
+    background-color: $color-teal;
+    border: none;
+    border-radius: 4px;
+    color: $color-white;
+    font: $font-Soleil;
+    font-size: 13px;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 22.5px;
+    text-align: center;
+  }
+}
+
+.cart_total_div {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  h4 {
+    color: $color-black-text;
+    font: $font-Poppins-SemiBold;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: center;
+  }
 }

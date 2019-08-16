@@ -7,8 +7,8 @@ import Menu from "./pages/Menu";
 import NavHeader from "./components/NavHeader";
 
 function App() {
-  const [currentCart, setCart] = useState({ items: [] });
-  const [cartVisible, setCartVisibility] = useState(false);
+  const [currentCart, setCart] = useState({ items: ["a", "a", "b"] });
+  const [cartVisible, setCartVisibility] = useState(true);
   const addToCart = id => {
     setCart({ items: [...currentCart.items, id] });
   };
