@@ -45,6 +45,11 @@ const Cart = ({
     <div className={show} id="cart">
       <div onClick={toggleCartView} className="cart_background" />
       <div className="cart_slider">
+        <span className="cart_slider_close_span">
+          <button className="cart_slider_close" onClick={toggleCartView}>
+            Close
+          </button>
+        </span>
         <h1>My Cart</h1>
         {renderItems()}
         <div className="cart_total_div">

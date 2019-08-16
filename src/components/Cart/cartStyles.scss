@@ -52,6 +52,7 @@
     border: none;
     border-radius: 4px;
     color: $color-white;
+    cursor: pointer;
     font: $font-Soleil;
     font-size: 13px;
     height: 50px;
@@ -59,6 +60,29 @@
     line-height: 22.5px;
     margin-top: 10px;
     text-align: center;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .cart_slider_close_span {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .cart_slider_close {
+    background-color: transparent;
+    border: none;
+    color: $color-black-text;
+    cursor: pointer;
+    font: $font-Poppins-Medium;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin-top: 23px;
+    padding: 5px;
+    text-align: right;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -105,7 +129,7 @@
     margin: 0;
     text-transform: capitalize;
   }
-  .cartItem_btn {
+  .cartItem_remove_btn {
     background-color: transparent;
     border: none;
     color: $color-gray;

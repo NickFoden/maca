@@ -10,7 +10,7 @@ const CartItem = ({ item, qty, removeItem }) => {
       <div className="cartItem_text">
         <h2>{title}</h2>
         <h3>{variation}</h3>
-        <button className="cartItem_btn" onClick={() => removeItem(id)}>
+        <button className="cartItem_remove_btn" onClick={() => removeItem(id)}>
           Remove
         </button>
       </div>
