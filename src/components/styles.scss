@@ -1,6 +1,7 @@
 $color-black: #000000;
 $color-black-text: #595959;
 $color-gray: #999999;
+$color-light-gray: #d3d3d3;
 $color-teal: #5dad93;
 $color-white: #ffffff;
 $color-button-background: #faf9f7;
@@ -17,6 +18,7 @@ $font-Soleil: 400 16px Soleil, sans-serif;
   display: flex;
   padding-left: 40px;
   height: 70px;
+  width: 100%;
 
   h1 {
     color: $color-teal;
@@ -30,14 +32,27 @@ $font-Soleil: 400 16px Soleil, sans-serif;
     width: 100%;
 
     li {
-      color: $color-black-text;
       font: $font-Poppins-Medium;
       font-size: 12px;
       margin: 0 10px;
       text-transform: uppercase;
     }
+    a {
+      color: $color-black-text;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      a {
+        display: none;
+      }
+      #pipe_separator {
+        display: none;
+      }
+    }
   }
-
   .cart_button {
     background: transparent;
     border: 0;
@@ -66,6 +81,9 @@ $font-Soleil: 400 16px Soleil, sans-serif;
       width: 20px;
       z-index: 2;
     }
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &.logo {
@@ -79,11 +97,40 @@ $font-Soleil: 400 16px Soleil, sans-serif;
   transform: translateY(-2px);
 }
 
+//Mobile Nav
+
+.header_nav_mobile_ul {
+  display: none;
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    li {
+      font: $font-Poppins-Medium;
+      font-size: 12px;
+      margin: 0 10px;
+      text-transform: uppercase;
+    }
+    a {
+      color: $color-black-text;
+      padding-bottom: 5px;
+      border-bottom: solid 2px;
+      border-color: transparent;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+//Footer
 footer {
   display: flex;
+  margin: 0 auto;
   max-height: 50px;
-  width: 1024px;
-
+  max-width: 1024px;
+  width: 100%;
   .footer_nav {
     display: flex;
     flex-direction: row;
@@ -93,6 +140,11 @@ footer {
 
   a {
     text-decoration: none;
+  }
+  @media only screen and (max-width: 640px) {
+    .footer_nav {
+      // flex-direction: column;
+    }
   }
 }
 

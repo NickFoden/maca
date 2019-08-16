@@ -5,7 +5,7 @@ import "./styles.scss";
 
 const Footer = props => {
   return (
-    <footer>
+    <footer className="footer_container">
       <div className="footer_left_container">
         <h3>
           We are commited to serving, the freshest, most delightful treats.
