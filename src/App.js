@@ -7,22 +7,45 @@ import Menu from "./pages/Menu";
 import NavHeader from "./components/NavHeader";
 
 function App() {
-  const [currentCart, setCart] = useState({ items: ["a", "a", "b"] });
+  const [currentCart, setCart] = useState({ items: { a: 2, b: 1 } });
   const [cartVisible, setCartVisibility] = useState(true);
+
   const addToCart = id => {
-    setCart({ items: [...currentCart.items, id] });
+    setCart({
+      items: {
+        ...currentCart.items,
+        [id]: currentCart.items[id] ? currentCart.items[id] + 1 : 1
+      }
+    });
   };
+
+  const removeItem = id => {
+    setCart({
+      items: {
+        ...currentCart.items,
+        [id]: currentCart.items[id] ? currentCart.items[id] - 1 : 0
+      }
+    });
+  };
+
   const toggleCartView = () => {
     setCartVisibility(!cartVisible);
   };
+
+  const totalItems = () => {
+    let count = 0;
+    for (let oneItem in currentCart.items) {
+      count += currentCart.items[oneItem];
+    }
+    return count;
+  };
+
   return (
     <Router>
-      <NavHeader
-        numberInCart={currentCart.items.length}
-        toggleCartView={toggleCartView}
-      />
+      <NavHeader numberInCart={totalItems()} toggleCartView={toggleCartView} />
       <Cart
-        currentCart={currentCart}
+        currentCartItemsObj={currentCart.items}
+        removeItem={removeItem}
         toggleCartView={toggleCartView}
         visibility={cartVisible}
       />

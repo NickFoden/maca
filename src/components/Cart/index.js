@@ -1,9 +1,34 @@
 import React from "react";
+import CartItem from "./CartItem";
+import InventoryData from "../../pages/Menu/menuData";
 import "./cartStyles.scss";
 
-const Cart = ({ currentCart, toggleCartView, visibility }) => {
+const Cart = ({
+  currentCartItemsObj,
+  removeItem,
+  toggleCartView,
+  visibility
+}) => {
   const show = visibility ? "displayCart" : "none";
-  console.dir(currentCart);
+
+  const renderItems = () => {
+    const itemsArray = [];
+    for (let keyName in currentCartItemsObj) {
+      if (currentCartItemsObj[keyName] > 0) {
+        itemsArray.push(keyName);
+      }
+    }
+
+    return itemsArray.map(itemId => {
+      return (
+        <CartItem
+          item={InventoryData[itemId]}
+          qty={currentCartItemsObj[itemId]}
+          removeItem={removeItem}
+        />
+      );
+    });
+  };
 
   if (visibility) {
     return (
@@ -11,7 +36,7 @@ const Cart = ({ currentCart, toggleCartView, visibility }) => {
         <div onClick={toggleCartView} className="cart_background" />
         <div className="cart_slider">
           <h1>My Cart</h1>
-
+          {renderItems()}
           <div className="cart_total_div">
             <h4>Total</h4>
             <h4>$55.00</h4>
