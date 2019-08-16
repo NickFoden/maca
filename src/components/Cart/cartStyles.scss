@@ -24,13 +24,14 @@
   background-color: lightgrey;
   height: 100vh;
   opacity: 0.7;
-  width: 75vw;
+  width: 100vw;
+  z-index: 4;
 }
 
 #cart {
   background: transparent;
   display: flex;
-  z-index: 10;
+  z-index: 3;
 }
 
 .cart_slider {
@@ -39,6 +40,7 @@
   flex-direction: column;
   padding: 0 30px;
   width: 362px;
+  z-index: 5;
   h1 {
     color: $color-black-text;
     font: $font-Poppins-SemiBold;
@@ -55,6 +57,7 @@
     height: 50px;
     letter-spacing: 0.5px;
     line-height: 22.5px;
+    margin-top: 10px;
     text-align: center;
   }
 }
@@ -86,6 +89,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+  width: 161px;
 
   h2 {
     color: $color-teal;

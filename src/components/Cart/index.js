@@ -49,7 +49,7 @@ const Cart = ({
         {renderItems()}
         <div className="cart_total_div">
           <h4>Total</h4>
-          <h4>{formatCurrency(calculateTotal(), true)}</h4>
+          <h4>${formatCurrency(calculateTotal(), true)}</h4>
         </div>
         <button className="cart_checkout_btn" onClick={checkout}>
           Continue to Checkout
