@@ -8,13 +8,31 @@ const Social = () => {
   return (
     <ul className="social_ul">
       <li>
-        <img src={facebook} alt="facebook" />
+        <a
+          href="https://www.facebook.com/hisawyer/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={facebook} alt="facebook" />
+        </a>
       </li>
       <li>
-        <img src={instagram} alt="instagram" />
+        <a
+          href="https://www.instagram.com/hellosawyer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={instagram} alt="instagram" />
+        </a>
       </li>
       <li>
-        <img src={twitter} alt="twitter" />
+        <a
+          href="https://twitter.com/sawyer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={twitter} alt="twitter" />
+        </a>
       </li>
     </ul>
   );

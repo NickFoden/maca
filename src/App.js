@@ -4,6 +4,7 @@ import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Layout from "./components/Layout";
 import Menu from "./pages/Menu";
+import OtherPage from "./pages/OtherPage";
 import NavHeader from "./components/NavHeader";
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
           path="/"
           render={props => <Menu {...props} addToCart={addToCart} />}
         />
+        <Route exact path="/:id" render={props => <OtherPage {...props} />} />
       </Layout>
       <Footer />
     </Router>

@@ -13,18 +13,16 @@ const Footer = props => {
         <Social />
         <h5>© {new Date().getFullYear()} Macarons</h5>
       </div>
-      <nav className="footer_nav">
-        <div className="footer_nav_child_div">
-          <h3>Company</h3>
-          <Link to="/">About</Link>
-          <Link to="/">Locations</Link>
-          <Link to="/">Contact Us</Link>
-        </div>
-        <div className="footer_nav_child_div">
-          <h3>Order</h3>
-          <Link to="/">Order Tracker</Link>
-          <Link to="/">Delivery FAQs</Link>
-        </div>
+      <nav className="footer_nav_child_div">
+        <h3>Company</h3>
+        <Link to="/about">About</Link>
+        <Link to="/locations">Locations</Link>
+        <Link to="/contact">Contact Us</Link>
+      </nav>
+      <nav className="footer_nav_child_div">
+        <h3>Order</h3>
+        <Link to="/tracker">Order Tracker</Link>
+        <Link to="/delivery">Delivery FAQs</Link>
       </nav>
     </footer>
   );

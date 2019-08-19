@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import Cart from "../assets/cart_icon.svg";
 import "./styles.scss";
@@ -8,16 +8,18 @@ const NavHeader = ({ numberInCart, toggleCartView }) => {
   return (
     <Fragment>
       <nav className="header_nav">
-        <img className="logo" src={Logo} alt="Macarons text" />
+        <Link to="/">
+          <img className="logo" src={Logo} alt="Macarons text" />
+        </Link>
         <ul>
           <li>
-            <NavLink>menu</NavLink>
+            <NavLink to="/">menu</NavLink>
           </li>
           <li>
-            <NavLink>beverages</NavLink>
+            <NavLink to="/beverages">beverages</NavLink>
           </li>
           <li>
-            <NavLink>gifts</NavLink>
+            <NavLink to="/gifts">gifts</NavLink>
           </li>
           <li id="pipe_separator">|</li>
           <li>
@@ -32,15 +34,19 @@ const NavHeader = ({ numberInCart, toggleCartView }) => {
       </nav>
       <ul className="header_nav_mobile_ul">
         <li>
-          <NavLink activeStyle={{ borderColor: "#2fc594" }} to="/">
+          <NavLink activeStyle={{ borderColor: "#2fc594" }} exact to="/">
             menu
           </NavLink>
         </li>
         <li>
-          <NavLink>beverages</NavLink>
+          <NavLink activeStyle={{ borderColor: "#2fc594" }} to="/beverages">
+            beverages
+          </NavLink>
         </li>
         <li>
-          <NavLink>gifts</NavLink>
+          <NavLink activeStyle={{ borderColor: "#2fc594" }} to="/gifts">
+            gifts
+          </NavLink>
         </li>
       </ul>
     </Fragment>

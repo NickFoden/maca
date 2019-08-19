@@ -34,7 +34,6 @@ const Cart = ({
 
   const calculateTotal = () => {
     let total = 0;
-
     for (let key in currentCartItemsObj) {
       total += currentCartItemsObj[key] * InventoryData[key]["cost"];
     }
