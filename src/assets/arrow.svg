@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Arrow/Big Down</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="1296" width="375" height="463"></rect>
+        <filter x="-0.1%" y="-0.3%" width="100.3%" height="100.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.960784314   0 0 0 0 0.960784314   0 0 0 0 0.960784314  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Macarons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Macarons-Mobile-" transform="translate(-340.000000, -1493.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="375" height="1759"></rect>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FAF9F7" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group-4" transform="translate(0.000000, 1320.000000)" fill="#595959" stroke="#595959" stroke-width="1.5">
+                <g id="Footer">
+                    <g id="Group-3" transform="translate(0.000000, 150.000000)">
+                        <g id="Group-2" transform="translate(20.000000, 15.000000)">
+                            <g id="Arrow/Big-Down" transform="translate(328.000000, 12.000000) scale(1, -1) translate(-328.000000, -12.000000) translate(321.000000, 8.000000)">
+                                <path d="M6.59598734,6.97850733 L0.0863624613,0.500028984 C-0.0287874871,0.385776213 -0.0287874871,0.200202015 0.0863624613,0.0859492437 C0.201164525,-0.0286497479 0.387630906,-0.0286497479 0.502780854,0.0859492437 L6.80402259,6.3570415 L12.967154,0.223052569 C13.0823039,0.108799798 13.2687703,0.108799798 13.3835724,0.223052569 C13.4987223,0.337651561 13.4987223,0.523225759 13.3835724,0.63747853 L7.01205784,6.97850733 C6.95465681,7.03563371 6.87951364,7.06437002 6.80402259,7.06437002 C6.72853154,7.06437002 6.65338837,7.03563371 6.59598734,6.97850733 Z" id="Fill-1"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
