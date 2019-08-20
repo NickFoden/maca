@@ -34,17 +34,17 @@ const NavHeader = ({ numberInCart, toggleCartView }) => {
       </nav>
       <ul className="header_nav_mobile_ul">
         <li>
-          <NavLink activeStyle={{ borderColor: "#2fc594" }} exact to="/">
+          <NavLink exact to="/">
             menu
           </NavLink>
         </li>
         <li>
-          <NavLink activeStyle={{ borderColor: "#2fc594" }} to="/beverages">
+          <NavLink to="/beverages">
             beverages
           </NavLink>
         </li>
         <li>
-          <NavLink activeStyle={{ borderColor: "#2fc594" }} to="/gifts">
+          <NavLink to="/gifts">
             gifts
           </NavLink>
         </li>

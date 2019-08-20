@@ -32,27 +32,28 @@
     color: $color-black-text;
     letter-spacing: 0;
   }
+  @media only screen and (max-width: 640px) {
+    margin: 15px auto;
+  }
 }
 
 .MenuItem_container {
   box-shadow: 0 1px 0 0 #f3f0eb;
   background: $color-white;
-
   display: flex;
   padding: 5px 5px 5px 40px;
-}
 
-.MenuItem_hr {
-  height: 2px;
-  border: none;
-  margin-left: 40px;
-}
-
-.MenuItem_image {
-  height: 160px;
-  min-height: 160px;
-  min-width: 220px;
-  width: 220px;
+  .MenuItem_image {
+    height: 160px;
+    width: 220px;
+  }
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    padding: 5px;
+    .MenuItem_image {
+      margin: 0 auto;
+    }
+  }
 }
 
 .MenuItem_text_read_button {
@@ -67,8 +68,7 @@
 }
 
 .MenuItem_text {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 
   h2 {
     color: $color-teal;
@@ -89,6 +89,30 @@
     color: $color-black-text;
     font: $font-Poppins-Regular;
     font-size: 12px;
+    padding-right: 5px;
     width: 462px;
+  }
+  @media only screen and (max-width: 640px) {
+    padding: 0 40px;
+    h2 {
+      margin-top: 5px;
+      text-align: center;
+    }
+    p {
+      width: auto;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0 20px;
+  }
+}
+
+.MenuItem_hr {
+  height: 2px;
+  border: none;
+  margin-left: 40px;
+  @media only screen and (max-width: 640px) {
+    margin: 0px 0px 20px 0px;
+    width: 100%;
   }
 }
